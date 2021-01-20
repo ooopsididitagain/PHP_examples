@@ -19,11 +19,12 @@ function sum_of_numbers_in_a_number($number = 1)
         $sum_string[-2] = '=';
         return ($sum_string) . ($result . '<br/>');
     } else {
-        return 'Введите число. <br/>';
+        return 'Введите целое число. <br/>';
     }
 
 }
 
 echo sum_of_numbers_in_a_number();
 echo sum_of_numbers_in_a_number(1254);
+echo sum_of_numbers_in_a_number(1254.2);
 echo sum_of_numbers_in_a_number('test');
