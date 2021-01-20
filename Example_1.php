@@ -10,10 +10,11 @@ function sum_of_numbers_in_a_number($number = 1)
     $result = 0;
     $sum_string = '';
     if (is_int($number)) {
-        $number = strval($number);
-        for ($i = 0; $i < strlen($number); $i++) {
-            $result += $number[$i];
-            $sum_string .= "$number[$i] + ";
+        $number_to_string = strval($number);
+        $length_of_string = strlen($number_to_string);
+        for ($i = 0; $i < $length_of_string; $i++) {
+            $result += $number_to_string[$i];
+            $sum_string .= "$number_to_string[$i] + ";
         }
         $sum_string[-2] = '=';
         return ($sum_string) . ($result . '<br/>');
